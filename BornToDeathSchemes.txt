@@ -73,10 +73,10 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
+      - name: Make gradle executable
+        run: chmod +x ./gradle
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --no-daemon
+        run: ./gradle assembleDebug --no-daemon
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
@@ -403,4 +403,5 @@ res/values-hi/strings.xml
     <string name="start_trial">7 दिन की मुफ्त ट्रायल शुरू करें</string>
     <string name="view_pdf">दस्तावेज़ देखें (डाउनलोड नहीं)</string>
 </resources>
+
 
